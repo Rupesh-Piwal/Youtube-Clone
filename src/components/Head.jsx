@@ -2,12 +2,24 @@ import React from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaUser } from "react-icons/fa";
 import { GoSearch } from "react-icons/go";
+import { useDispatch } from "react-redux";
+import { toggleMenu } from "../utils/appSlice";
 
 const Head = () => {
+  const dispatch = useDispatch();
+
+  const toggleMenuHandler = () => {
+    dispatch(toggleMenu());
+  };
+
   return (
-    <div className="grid grid-flow-col p-3 m-2 shadow-lg ">
+    <div className="grid grid-flow-col p-3 m-1 shadow-sm ">
       <div className="flex col-span-1 ">
-        <RxHamburgerMenu size={30} />
+        <RxHamburgerMenu
+          className="cursor-pointer"
+          size={30}
+          onClick={() => toggleMenuHandler()}
+        />
         <img
           style={{ width: "110px", height: "30px", marginLeft: "8px" }}
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRONuWvQHJt5ooi822FbtizsibO3m7cNHMHNg&usqp=CAU"
