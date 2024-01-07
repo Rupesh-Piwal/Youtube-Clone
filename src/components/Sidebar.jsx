@@ -6,7 +6,7 @@ import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
 const Sidebar = () => {
   return (
     <div className="bg-green-200 border border-gray-600 w-44 ">
-      <div className="mainList pl-4">
+      <div className="mainList pl-3">
         <div className="home flex py-2 gap-6 items-center ">
           <HomeIcon style={{ fontSize: 30 }} />
           <p>Home</p>
